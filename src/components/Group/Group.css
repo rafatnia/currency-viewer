@@ -42,9 +42,10 @@
 .CurrencyGroupItem {
     width: 20%;
     margin: 15px;
+    cursor: pointer;
     border-radius: 3px;
     background-color: #49599a;
-    color: #f1f1f1;
+    color: #e7e7e7;
     display: flex;
     padding: 15px;
     flex-direction: column;
@@ -90,10 +91,15 @@
     margin-top: 5px;
     font-size: 13px;
     margin-bottom: 5px;
+    transition: 0.3s;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 
+}
+
+.CurrencyGroupItemRow:hover {
+    color: white;
 }
 
 

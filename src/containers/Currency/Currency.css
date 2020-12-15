@@ -2,5 +2,50 @@
     width: 100%;
     padding: 20px;
     background-color: rgb(231, 231, 231);
+}
 
+
+.RefreshButtonDiv {
+    width: 40px;
+    height: 40px;
+    background-color: skyblue;
+    position: fixed;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 30px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.RefreshButtonDiv:hover {
+    background-color: rgb(46, 219, 250);
+}
+
+
+.RefreshButtonIcon {
+    height: 17px;
+    width: 17px;
+} 
+
+
+@keyframes RefreshAnimation {
+    0% {
+        transform: rotate(0deg);
+        background-color: rgb(46, 219, 250);
+
+    }
+    50% {
+        background-color: rgb(18, 196, 228);
+    }
+    100% {
+        transform: rotate(360deg);
+        background-color: rgb(46, 219, 250);
+    }
+}
+
+.RefreshButtonDiv.Loading {
+    animation: RefreshAnimation 1.5s infinite;
 }
