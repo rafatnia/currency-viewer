@@ -1,7 +1,104 @@
 .CurrencyGroup {
     width: 100%;
-    height: 60px;
-    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.CurrencyGroupTitle {
+    width: 100%;
     border-radius: 3px;
-    
+    height: 60px;
+    background-color: #7986cb;
+    display: flex;
+    color: #f1f1f1;
+    flex-direction: row;
+    transition: 0.3s;
+    justify-content: center;
+    align-items: center;
+}
+
+.CurrencyGroupTitle:hover {
+    background-color: #49599a;
+}
+
+.CurrencyGroupItems {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+
+
+.CurrencyGroupItem {
+    width: 20%;
+    margin: 15px;
+    border-radius: 3px;
+    background-color: #49599a;
+    color: #f1f1f1;
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    transition: 0.3s;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.CurrencyGroupItem:hover {
+    background-color: #3a4c92;
+    padding: 15px 20px;
+}
+
+@media (max-width: 1200px) {
+    .CurrencyGroupItem {
+        width: 30%;
+    }
+}
+
+@media (max-width: 960px) {
+    .CurrencyGroupItem {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .CurrencyGroupItem {
+        width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .CurrencyGroupItem {
+        width: 100%;
+    }
+}
+
+
+.CurrencyGroupItemRow {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    font-size: 13px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    direction: rtl;
+
+}
+
+
+.CurrencyGroupItemSeperator {
+    width: 100%;
+    height: 1px;
+    background-color: #f1f1f1;
+    opacity: 0.2;
+    margin-top: 3px;
 }

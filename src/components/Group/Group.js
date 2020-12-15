@@ -8,8 +8,42 @@ const group = (props) => {
     return (
         <div className={`CurrencyGroup`}>
             <div className={`CurrencyGroupTitle`}>{props.title}</div>
-            <div>
-                hello
+            <div className={`CurrencyGroupItems`}>
+                {
+                    props.items.map(ikey => {
+                        return (
+                            <div className={`CurrencyGroupItem`}>
+                                {/* <div className={`CurrencyGroupItemRow`}>
+                                    <div>واحد پول:</div>
+                                    <div>{ikey.Currency}</div>
+                                </div>
+
+                                <div className={`CurrencyGroupItemSeperator`} />
+
+                                <div className={`CurrencyGroupItemRow`}>
+                                    <div>کشور:</div>
+                                    <div>{ikey.Code}</div>
+                                </div>
+                                
+                                <div className={`CurrencyGroupItemSeperator`} />
+
+                                <div className={`CurrencyGroupItemRow`}>
+                                    <div>فروش:</div>
+                                    <div>{ikey.Sell}</div>
+                                </div>
+
+                                <div className={`CurrencyGroupItemSeperator`} />
+
+                                <div className={`CurrencyGroupItemRow`}>
+                                    <div>خرید:</div>
+                                    <div>{ikey.Buy}</div>
+                                </div> */}
+
+                                
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
     )

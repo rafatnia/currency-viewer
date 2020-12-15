@@ -18,9 +18,12 @@ class Currency extends Component {
 
 
     render () {
+        if(this.props.data == null) {
+            return null
+        }
         return (
-            <div className={`Currency ${this.props.data == null ? 'Loading' : ''}`}>
-                <Group />
+            <div className={`Currency`}>
+                <Group title='واحد پول' items={this.props.data.Currency} />
             </div>
         )
     }
