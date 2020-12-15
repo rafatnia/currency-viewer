@@ -24,6 +24,8 @@ class Currency extends Component {
         return (
             <div className={`Currency`}>
                 <Group title='واحد پول' items={this.props.data.Currency} />
+                <Group title='طلا' items={this.props.data.Gold} />
+                <Group title='شاخص' items={this.props.data.Item} />
             </div>
         )
     }

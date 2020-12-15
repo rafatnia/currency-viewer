@@ -13,33 +13,19 @@ const group = (props) => {
                     props.items.map(ikey => {
                         return (
                             <div className={`CurrencyGroupItem`}>
-                                {/* <div className={`CurrencyGroupItemRow`}>
-                                    <div>واحد پول:</div>
-                                    <div>{ikey.Currency}</div>
-                                </div>
-
-                                <div className={`CurrencyGroupItemSeperator`} />
-
-                                <div className={`CurrencyGroupItemRow`}>
-                                    <div>کشور:</div>
-                                    <div>{ikey.Code}</div>
-                                </div>
-                                
-                                <div className={`CurrencyGroupItemSeperator`} />
-
-                                <div className={`CurrencyGroupItemRow`}>
-                                    <div>فروش:</div>
-                                    <div>{ikey.Sell}</div>
-                                </div>
-
-                                <div className={`CurrencyGroupItemSeperator`} />
-
-                                <div className={`CurrencyGroupItemRow`}>
-                                    <div>خرید:</div>
-                                    <div>{ikey.Buy}</div>
-                                </div> */}
-
-                                
+                                {
+                                    Object.keys(ikey).map((zkey) => {
+                                        return (
+                                            <>
+                                                <div className={`CurrencyGroupItemRow`}>
+                                                    <div>{zkey}:</div>
+                                                    <div>{ikey[zkey]}</div>
+                                                </div>
+                                                <div className={`CurrencyGroupItemSeperator`} />
+                                            </>
+                                        )
+                                    })
+                                }
                             </div>
                         )
                     })
