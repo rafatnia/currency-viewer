@@ -18,13 +18,16 @@ class Currency extends Component {
 
 
     render() {
+        if (this.props.error) {
+            return <div className={`ErrorContainer`}>
+                <div className='Error'>
+
+                خطا در برقراری ارتباط. دوباره صفحه را رفرش کنید
+                </div>
+            </div>
+        }
         if (this.props.data == null) {
             return null
-        }
-        if (this.props.error) {
-            return <div style={{width: '100%', height: '100%', position: 'fixed', top: '0', right: '0', display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                خطا در برقراری ارتباط. دوباره صفحه را رفرش کنید
-            </div>
         }
         return (
             <>

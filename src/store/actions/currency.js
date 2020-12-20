@@ -31,6 +31,7 @@ export const getCurrency = () => {
             dispatch(getCurrencySuccess(response.data));
             console.log(response.data);
         }).catch(error => {
+            dispatch(getCurrencyFailed())
             console.log(error);
         })
     }

@@ -16,7 +16,6 @@ const reducer = (state = initialState, action) => {
             return updateUpject(state, {data: action.payload, loading: false});
         case actionTypes.GET_CURRENCY_FAILED:
             return updateUpject(state, {loading: false, error: true});
-        
         default: return state;
     }
 }
